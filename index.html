@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- Demo styles -->
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+        background: black;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      .swiper-container {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        margin-left: -50%;
+      }
+
+      .swiper-slide {
+        background-size: cover;
+        box-sizing: border-box;
+        padding: 8em 3em;
+        color: white;
+        background-size: cover !important;
+      }
+
+      .slide1 {
+        background: url(./img/main-bg-min.png);
+      }
+
+      .slide2 {
+        background: url(./img/contact-bg-min.png);
+      }
+
+      .slide3 {
+        background: url(./img/about-bg-min.png);
+      }
+
+      .slide4 {
+        background: url(./img/work-bg-min.png);
+      }
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        top: 85%;
+        outline: none;
+      }
+
+      .swiper-button-next {
+        right: 3em;
+      }
+
+      .swiper-button-prev {
+        left: 3em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide slide1">
+          <h1>hi my name</h1>
+        </div>
+
+        <div class="swiper-slide slide2">
+          <h1>hi my name</h1>
+        </div>
+
+        <div class="swiper-slide slide3">
+          <h1>hi my name</h1>
+        </div>
+
+        <div class="swiper-slide slide4">
+          <h1>hi my name</h1>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next" style="color: wheat"></div>
+      <div class="swiper-button-prev" style="color: wheat"></div>
+    </div>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".swiper-container", {
+        effect: "cube",
+        grabCursor: true,
+        cubeEffect: {
+          shadow: false,
+          slideShadows: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>
